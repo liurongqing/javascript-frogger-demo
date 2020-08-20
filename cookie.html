@@ -7,6 +7,13 @@
 </head>
 <body>
   <h1> liurongqing.com cookie 测试页面 </h1>
+
+<img src='https://raw.githubusercontent.com/liurongqing/minigame-website/master/images/icon_demo.png'>
+<img src='https://raw.githubusercontent.com/liurongqing/minigame-website/master/images/icon_github.png'>
+<img src='https://raw.githubusercontent.com/liurongqing/minigame-website/master/images/icon_tutorial.png'>
+<img src='https://raw.githubusercontent.com/liurongqing/minigame-website/master/images/logo.png'>
+<img src='https://raw.githubusercontent.com/liurongqing/minigame-website/master/images/test.png'>
+
     <script>
         var time = 60 * 60 * 24 * 30
         var v = document.location.search.split('=')[1]
@@ -16,6 +23,18 @@
         document.cookie="testCookiev=" + v + ";max-age=" + time
         document.cookie="testCookie=999;max-age=" + time
         document.cookie=k+"="+v+";max-age=" + time
+      
+      
+      const imgs = ['icon_demo.png', 'icon_github.png', 'icon_tutorial.png', 'logo.png', 'test.png']
+      setTimeout(function(){
+        const t = Date.now()
+        for(let i = 0; i < 5; i++) {
+          const img = new Image()
+          img.src = 'https://raw.githubusercontent.com/liurongqing/minigame-website/master/images/' + imgs[i] + '?t=' + t
+        }
+        
+        
+      }, 5000)
     </script>
 </body>
 </html>
